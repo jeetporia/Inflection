@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Inflection Point</h1>
+    </div>
+</div>
+
+<div class="container">
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label for="email">Push Item</label>
+            <input type="email" class="form-control" id="email" #item>
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="pushItem(item)">Submit</button>
+
+    </form>
+
+    <div class="mt-4">
+        <label>Array</label>
+        <div class="d-flex flex-row">
+            <div class="p-2" *ngFor="let i of items">
+                {{i}}
+            </div>
+        </div>
+    </div>
+    <label>Inflection point of Above Array</label>
+    <div class="container">
+        {{inflection}}
+    </div>
+</div>
+
+<div>
+    <app-max-price></app-max-price>
+</div>
